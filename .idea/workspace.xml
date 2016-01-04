@@ -46,8 +46,8 @@
       <file leaf-file-name="CoOccurence.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Executors/CoOccurence.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2512563">
-              <caret line="93" column="4" selection-start-line="93" selection-start-column="4" selection-end-line="93" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.5929648">
+              <caret line="98" column="57" selection-start-line="98" selection-start-column="57" selection-end-line="98" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#351#385#0" expanded="true" />
@@ -931,7 +931,7 @@
       <option name="number" value="Default" />
       <updated>1451834404909</updated>
       <workItem from="1451834410987" duration="6695000" />
-      <workItem from="1451912404403" duration="12425000" />
+      <workItem from="1451912404403" duration="12528000" />
     </task>
     <task id="LOCAL-00001" summary="第一次从ideaIU提交代码">
       <created>1451925424575</created>
@@ -981,7 +981,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19120000" />
+    <option name="totallyTimeSpent" value="19223000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1366" height="772" extended-state="6" />
@@ -1178,8 +1178,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Executors/CoOccurence.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2512563">
-          <caret line="93" column="4" selection-start-line="93" selection-start-column="4" selection-end-line="93" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.5929648">
+          <caret line="98" column="57" selection-start-line="98" selection-start-column="57" selection-end-line="98" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#351#385#0" expanded="true" />
