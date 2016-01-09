@@ -14,7 +14,7 @@ public class Recommend {
     private Set<String> likeSet;
     private Map<String, Integer> item2UsersAmount;
     private Map<String, Map<String, Double>> similarity;
-    private Set<String> recommendList = new HashSet<String>();
+    private List<String> recommendList = new ArrayList<String>();
     private Map<String, Double> likeDegree = new HashMap<String, Double>();
 
     private class Runner extends Thread {
@@ -35,7 +35,7 @@ public class Recommend {
                 ++looper;
                 if (looper < start || looper >= end) continue;
                 Double ld = 0d;
-                Map<String, Double> similarSet = getSimilarSet(itemA);
+                Map<String, Double> similarSet = sortMap(getSimilarSet(itemA), -1);
                 int innerLooper = 0;
                 for (String itemB : similarSet.keySet()) {
                     if (innerLooper++ >= Const.TO_RECOMMEND_AMOUNT) break;
@@ -108,18 +108,17 @@ public class Recommend {
         long startTime = System.currentTimeMillis();
         PreCondition preCondition = new PreCondition();
         CoOccurence coOccurence = new CoOccurence();
-        preCondition.exe("/home/raymondwong/code/recommendersystem/data/rec_log_train_1000.txt");
+        preCondition.exe("/home/raymondwong/code/recommendersystem/data/rec_log_train_positive.txt");
         coOccurence.exe(preCondition.getUser2ItemsStr(), preCondition.getItem2UserAmount());
         Similarity similarity = new Similarity();
         similarity.exe(preCondition.getItem2UserAmount(), coOccurence.getCoOccurenceMatirx());
-        System.out.println(similarity.getSimilarity());
         for (String uid : preCondition.getUser2ItemsStr().keySet()) {
             exe(uid, preCondition.getUser2ItemsStr(), preCondition.getItem2UserAmount(), similarity.getSimilarity());
             break;
         }
         CommonUtils.logger(this.getClass(), CommonUtils.Type.INFO, "共耗时 " + CommonUtils.prettyTimeDiff(startTime, System.currentTimeMillis()));
         System.out.println(likeDegree);
-        System.out.println(recommendList);
+        System.out.println(uid + "\t" + recommendList);
     }
 
 
@@ -142,7 +141,7 @@ public class Recommend {
         this.similarity = similarity;
     }
 
-    public Set<String> getRecommendList() {
+    public List<String> getRecommendList() {
         return recommendList;
     }
 }

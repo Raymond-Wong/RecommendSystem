@@ -95,9 +95,9 @@ public class CoOccurence {
     public void test() throws Exception {
         long startTime = System.currentTimeMillis();
         PreCondition preCondition = new PreCondition();
-        preCondition.exe("/home/raymondwong/code/recommendersystem/data/rec_log_train_100.txt");
+        preCondition.exe("/home/raymondwong/code/recommendersystem/testData/raw_data.txt");
         setUser2ItemStr(preCondition.getUser2ItemsStr());
-//        exe(preCondition.getUser2ItemsStr(), preCondition.getItem2UserAmount());
+        exe(preCondition.getUser2ItemsStr(), preCondition.getItem2UserAmount());
         CommonUtils.logger(this.getClass(), CommonUtils.Type.INFO, "共耗时 " + CommonUtils.prettyTimeDiff(startTime, System.currentTimeMillis()));
         System.out.println(coOccurenceMatirx);
     }

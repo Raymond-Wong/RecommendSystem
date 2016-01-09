@@ -1,5 +1,7 @@
 package Config;
 
+import Jama.Matrix;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -13,17 +15,21 @@ public class Const {
      */
     public static final int THREADS_AMOUNT = 1;
 
+    /**
+     * 是否在调试模式
+     */
     public static final boolean IS_DEBUG = false;
+
+    /**
+     * 待推荐的人数
+     */
+    public static final int TO_RECOMMEND_AMOUNT = 10;
 
     @org.junit.Test
     public void test() {
-        Map<String, Map<String, String>> map = new HashMap<String, Map<String, String>>();
-        Map<String, String> tmpMap = new HashMap<String, String>();
-        tmpMap.put("middle", "right");
-        map.put("left", tmpMap);
-        System.out.println(map);
-        map.get("left").put("middle", "left");
-        System.out.println(map);
+        double[][] arr = {{1., 2.}, {2., 3.}};
+        Matrix A = new Matrix(arr);
+        System.out.println(A.getArray());
     }
 
 }

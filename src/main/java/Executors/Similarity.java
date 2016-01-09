@@ -41,8 +41,9 @@ public class Similarity {
             for (String itemA : coOccurence.keySet()) {
                 ++looper;
                 if (looper < start || looper >= end) continue;
+                CommonUtils.logger(this.getClass(), CommonUtils.Type.DEBUG, "正在根据 " + start + " 到 " + end + " 中的第 " + looper + " 个用户构造相似性矩阵 : " + coOccurence.get(itemA).keySet().size());
                 for (String itemB : coOccurence.get(itemA).keySet()) {
-                    synchronized (similarity) {
+//                    synchronized (similarity) {
                         if (!similarity.containsKey(itemA))
                             similarity.put(itemA, new HashMap<String, Double>());
                         if (!similarity.containsKey(itemB))
@@ -50,7 +51,7 @@ public class Similarity {
                         double sim = coOccurence.get(itemA).get(itemB) / Math.sqrt(item2UsersAmount.get(itemA) * item2UsersAmount.get(itemB));
                         similarity.get(itemA).put(itemB, sim);
                         similarity.get(itemB).put(itemA, sim);
-                    }
+//                    }
                 }
             }
         }
@@ -63,7 +64,7 @@ public class Similarity {
         setCoOccurence(coOccurence);
         setItem2UsersAmount(item2UsersAmount);
         Runner[] runners = new Runner[Const.THREADS_AMOUNT];
-        int jobsAmount = item2UsersAmount.size();
+        int jobsAmount = coOccurence.size();
         int start = 0, end = 0;
         for (int i = 0; i < Const.THREADS_AMOUNT; i++) {
             start = end;
@@ -83,7 +84,7 @@ public class Similarity {
         long startTime = System.currentTimeMillis();
         PreCondition preCondition = new PreCondition();
         CoOccurence coOccurence = new CoOccurence();
-        preCondition.exe("/home/raymondwong/code/recommendersystem/data/rec_log_train_positive.txt");
+        preCondition.exe("/home/raymondwong/code/recommendersystem/testData/raw_data.txt");
         coOccurence.exe(preCondition.getUser2ItemsStr(), preCondition.getItem2UserAmount());
         exe(preCondition.getItem2UserAmount(), coOccurence.getCoOccurenceMatirx());
         CommonUtils.logger(this.getClass(), CommonUtils.Type.INFO, "共耗时 " + CommonUtils.prettyTimeDiff(startTime, System.currentTimeMillis()));

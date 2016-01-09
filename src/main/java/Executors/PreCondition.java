@@ -55,7 +55,7 @@ public class PreCondition {
 
     @org.junit.Test
     public void test() throws Exception {
-        exe("/home/raymondwong/code/recommendersystem/data/rec_log_train_1000.txt");
+        exe("/home/raymondwong/code/recommendersystem/testData/raw_data.txt");
     }
 
     public Map<String, Integer> getItem2UserAmount() {

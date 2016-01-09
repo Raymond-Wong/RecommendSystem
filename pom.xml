@@ -22,6 +22,15 @@
             <version>2.4</version>
         </dependency>
 
+        <dependency>
+            <groupId>jama</groupId>
+            <artifactId>jama</artifactId>
+            <version>1.0.3</version>
+            <scope>system</scope>
+            <!--本地jar的路径,相对或者绝对都可以-->
+            <systemPath>/home/raymondwong/code/IdeaProjects/RecommendSystem/src/main/resources/lib/Jama-1.0.3.jar</systemPath>
+        </dependency>
+
     </dependencies>
 
 
