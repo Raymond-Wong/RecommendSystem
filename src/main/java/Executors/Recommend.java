@@ -12,8 +12,8 @@ public class Recommend {
 
     private String uid;
     private Set<String> likeSet;
-    private Map<String, Integer> item2UsersAmount;
-    private Map<String, Map<String, Double>> similarity;
+    private Map<String, Integer> item2UsersAmount = null;
+    private Map<String, Map<String, Double>> similarity = null;
     private List<String> recommendList = new ArrayList<String>();
     private Map<String, Double> likeDegree = new HashMap<String, Double>();
 
@@ -50,11 +50,11 @@ public class Recommend {
 
     }
 
-    public void exe(String uid, Map<String, String> user2ItemStr, Map<String, Integer> item2UsersAmount, Map<String, Map<String, Double>> similarity) throws Exception {
-        CommonUtils.logger(this.getClass(), CommonUtils.Type.INFO, "开始给 " + uid + " 推荐 " + Const.TO_RECOMMEND_AMOUNT + " items");
+    public void exe(String uid, String[] likeSet, Map<String, Integer> item2UsersAmount, Map<String, Map<String, Double>> similarity) throws Exception {
+        CommonUtils.logger(this.getClass(), CommonUtils.Type.DEBUG, "开始给 " + uid + " 推荐 " + Const.TO_RECOMMEND_AMOUNT + " items");
         long startTime = System.currentTimeMillis();
         setUid(uid);
-        setLikeSet(user2ItemStr);
+        setLikeSet(likeSet);
         setItem2UsersAmount(item2UsersAmount);
         setSimilarity(similarity);
         Runner[] runners = new Runner[Const.THREADS_AMOUNT];
@@ -76,14 +76,14 @@ public class Recommend {
             recommendList.add(itemId);
             ++looper;
         }
-        CommonUtils.logger(this.getClass(), CommonUtils.Type.INFO, "结束给 " + uid + " 推荐items");
-        CommonUtils.logger(this.getClass(), CommonUtils.Type.INFO, "给 " + uid + " 推荐 " + Const.TO_RECOMMEND_AMOUNT + " 个items共耗时 " + CommonUtils.prettyTimeDiff(startTime, System.currentTimeMillis()));
+        CommonUtils.logger(this.getClass(), CommonUtils.Type.DEBUG, "结束给 " + uid + " 推荐items");
+        CommonUtils.logger(this.getClass(), CommonUtils.Type.DEBUG, "给 " + uid + " 推荐 " + Const.TO_RECOMMEND_AMOUNT + " 个items共耗时 " + CommonUtils.prettyTimeDiff(startTime, System.currentTimeMillis()));
     }
 
     private Map<String, Double> getSimilarSet(String item) {
         if (!similarity.containsKey(item))
             return new HashMap<String, Double>();
-        Map<String, Double> similarSet = sortMap(similarity.get(item), -1);
+        Map<String, Double> similarSet = similarity.get(item);
         return similarSet;
     }
 
@@ -92,7 +92,9 @@ public class Recommend {
         Collections.sort(list, new Comparator<Map.Entry<String, Double>>() {
 
             public int compare(Map.Entry<String, Double> o1, Map.Entry<String, Double> o2) {
-                return dir * ((o1.getValue() - o2.getValue() > 0) ? 1 : -1);
+                Double v1= o1.getValue(), v2 = o2.getValue();
+                int ret = dir * (v1 > v2 ? 1 : (v1 == v2 ? 0 : -1));
+                return ret;
             }
 
         });
@@ -108,17 +110,17 @@ public class Recommend {
         long startTime = System.currentTimeMillis();
         PreCondition preCondition = new PreCondition();
         CoOccurence coOccurence = new CoOccurence();
-        preCondition.exe("/home/raymondwong/code/recommendersystem/data/rec_log_train_positive.txt");
-        coOccurence.exe(preCondition.getUser2ItemsStr(), preCondition.getItem2UserAmount());
         Similarity similarity = new Similarity();
+        preCondition.exe("/home/raymondwong/code/recommendersystem/data/rec_log_train_10000.txt");
+        coOccurence.exe(preCondition.getUser2ItemsStr(), preCondition.getItem2UserAmount());
         similarity.exe(preCondition.getItem2UserAmount(), coOccurence.getCoOccurenceMatirx());
         for (String uid : preCondition.getUser2ItemsStr().keySet()) {
-            exe(uid, preCondition.getUser2ItemsStr(), preCondition.getItem2UserAmount(), similarity.getSimilarity());
+            exe(uid, preCondition.getUser2ItemsStr().get(uid).split(","), preCondition.getItem2UserAmount(), similarity.getSimilarity());
             break;
         }
         CommonUtils.logger(this.getClass(), CommonUtils.Type.INFO, "共耗时 " + CommonUtils.prettyTimeDiff(startTime, System.currentTimeMillis()));
         System.out.println(likeDegree);
-        System.out.println(uid + "\t" + recommendList);
+        System.out.println(recommendList);
     }
 
 
@@ -126,18 +128,20 @@ public class Recommend {
         this.uid = uid;
     }
 
-    public void setLikeSet(Map<String, String> user2ItemStr) {
+    public void setLikeSet(String[] mlikeSet) {
         likeSet = new HashSet<String>();
-        for (String itemId : user2ItemStr.get(uid).split(",")) {
-            likeSet.add(itemId);
+        for (String item : mlikeSet) {
+            likeSet.add(item);
         }
     }
 
     public void setItem2UsersAmount(Map<String, Integer> item2UsersAmount) {
+        if (this.item2UsersAmount != null) return;
         this.item2UsersAmount = item2UsersAmount;
     }
 
     public void setSimilarity(Map<String, Map<String, Double>> similarity) {
+        if (this.similarity != null) return;
         this.similarity = similarity;
     }
 

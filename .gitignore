@@ -1,5 +1,8 @@
 # 忽略编译生成的class文件
-target/
+target/*
+
+# 忽略resource里的文件
+resources/*
 
 .idea/workspace.xml
 

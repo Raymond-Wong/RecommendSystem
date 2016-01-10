@@ -25,6 +25,12 @@ public class Const {
      */
     public static final int TO_RECOMMEND_AMOUNT = 10;
 
+    /**
+     * resource文件夹的路径
+     */
+    public static final String RESOURCES_PATH = "/home/raymondwong/code/IdeaProjects/RecommendSystem/src/main/resources/";
+
+
     @org.junit.Test
     public void test() {
         double[][] arr = {{1., 2.}, {2., 3.}};
