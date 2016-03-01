@@ -1,10 +1,11 @@
-# ºöÂÔ±àÒëÉú³ÉµÄclassÎÄ¼ş
+# ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Éµï¿½classï¿½Ä¼ï¿½
 target/
 
-# ºöÂÔresourceÀïµÄÎÄ¼ş
+# ï¿½ï¿½ï¿½ï¿½resourceï¿½ï¿½ï¿½ï¿½Ä¼ï¿½
 resources/
 
-.idea/workspace.xml
+/.idea/workspace.xml
+
 
 *.class
 
