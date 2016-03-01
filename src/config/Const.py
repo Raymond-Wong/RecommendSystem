@@ -11,7 +11,8 @@ import sys
 DEBUG = False
 
 # 所有数据集的基础路径
-BASE_DATA_PATH = "/home/raymondwong/code/recommendersystem/data"
+# BASE_DATA_PATH = "/home/raymondwong/code/recommendersystem/data"
+BASE_DATA_PATH = "/home/raymondwong/code/IdeaProjects/RecommendSystem/data"
 
 # 训练集原始数据放置的路径
 RAW_TRAIN_DATA_PATH = os.path.join(BASE_DATA_PATH, "rec_log_train_10.txt")
@@ -20,10 +21,13 @@ RAW_TRAIN_DATA_PATH = os.path.join(BASE_DATA_PATH, "rec_log_train_10.txt")
 TRAIN_DATA_PATH = os.path.join(BASE_DATA_PATH, "rec_log_train_10.txt")
 
 # 隐空间的特征数量
-FEATURES_AMOUNT = 2
+FEATURES_AMOUNT = 10
 
 # 学习速率
-LEARNING_RATE = 0.1
+LEARNING_RATE = 0.003
 
 # 防止过拟合参数
-OVERFITTING = 0.1
+OVERFITTING = 0.02
+
+# 迭代训练的次数
+ITERATE_TIME = 100

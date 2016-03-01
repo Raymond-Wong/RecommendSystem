@@ -21,14 +21,16 @@ def main():
   CommonUtil.logger("Main", "DEBUG", "获取到 " + str(len(userSet)) + " 个用户和 " + str(len(itemSet)) + " 个item")
   # 读取用户对物品的态度矩阵(正确,目标)
   targetMatrix = DataHandler.getTargetMatrix(Const.TRAIN_DATA_PATH, userSet, itemSet)
-  # 构造用户到隐空间的映射矩阵
-  userMatrix = np.array([[0.1] * Const.FEATURES_AMOUNT] * len(userSet), dtype=np.float64)
+  # 随机构造用户到特征向量的映射矩阵
+  userMatrix = 9 * np.random.random((len(userSet), Const.FEATURES_AMOUNT))
   userMatrix.shape = (len(userSet), Const.FEATURES_AMOUNT)
-  # 构造物品到隐空间的映射矩阵
-  itemMatrix = np.array([[0.1] * Const.FEATURES_AMOUNT] * len(itemSet), dtype=np.float64)
-  itemMatrix.shape = (len(itemSet), Const.FEATURES_AMOUNT)
+  # 随机构造特征向量到物品的映射矩阵
+  itemMatrix = 9 * np.random.random((Const.FEATURES_AMOUNT, len(itemSet)))
+  itemMatrix.shape = (Const.FEATURES_AMOUNT, len(itemSet))
   # 开始迭代用户矩阵和物品矩阵
   (userMatrix, itemMatrix) = TrainHandler.iterateTrain(targetMatrix, userMatrix, itemMatrix)
+  # 输出结果矩阵
+  print np.dot(userMatrix, itemMatrix)
 
 if __name__ == "__main__":
   startKey = CommonUtil.startProcess('Main', '主程序')

@@ -44,6 +44,9 @@ def getUsersAndItems(path):
     line = f.readline()
   userSet = list(userSet)
   itemSet = list(itemSet)
+  # 对两个列表进行排序
+  userSet.sort()
+  itemSet.sort()
   CommonUtil.endProcess(startKey)
   return (userSet, itemSet)
 
