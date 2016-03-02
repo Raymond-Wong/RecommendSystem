@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="919abf34-4afa-41fb-9ebd-28174a467758" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Config/Const.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Executor/DataHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Executor/TrainHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Util/CommonUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Util/MatrixUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Executor/ValidateHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Config/Const.class" afterPath="$PROJECT_DIR$/target/classes/Config/Const.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Config/Const.java" afterPath="$PROJECT_DIR$/src/main/java/Config/Const.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Executor/DataHandler.java" afterPath="$PROJECT_DIR$/src/main/java/Executor/DataHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Util/MatrixUtils.java" afterPath="$PROJECT_DIR$/src/main/java/Util/MatrixUtils.java" />
     </list>
     <ignored path="RecommendSystem.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,11 +36,23 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+              <caret line="44" column="89" selection-start-line="44" selection-start-column="89" selection-end-line="44" selection-end-column="89" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1924#1925#0" expanded="true" />
-                <element signature="e#1954#1955#0" expanded="true" />
+                <element signature="e#2455#2456#0" expanded="true" />
+                <element signature="e#2485#2486#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ValidateHandler.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Executor/ValidateHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.50502515">
+              <caret line="44" column="35" selection-start-line="44" selection-start-column="35" selection-end-line="44" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -61,11 +72,13 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/Executor/DataHandler.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="54" column="83" selection-start-line="54" selection-start-column="83" selection-end-line="54" selection-end-column="83" />
+              <caret line="72" column="74" selection-start-line="72" selection-start-column="74" selection-end-line="72" selection-end-column="74" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#559#567#0" expanded="true" />
-                <element signature="e#864#872#0" expanded="true" />
+                <element signature="e#580#588#0" expanded="true" />
+                <element signature="e#885#893#0" expanded="true" />
+                <element signature="e#2139#2147#0" expanded="true" />
+                <element signature="e#2196#2204#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -75,7 +88,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/Config/Const.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+              <caret line="9" column="88" selection-start-line="9" selection-start-column="88" selection-end-line="9" selection-end-column="88" />
               <folding />
             </state>
           </provider>
@@ -93,13 +106,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MatrixUtils.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MatrixUtils.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Util/MatrixUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5477387">
-              <caret line="36" column="56" selection-start-line="36" selection-start-column="56" selection-end-line="36" selection-end-column="56" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="66" column="69" selection-start-line="66" selection-start-column="23" selection-end-line="66" selection-end-column="69" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1901#1909#0" expanded="true" />
+                <element signature="e#1952#1960#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -139,11 +154,12 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/java/Util/CommonUtils.java" />
         <option value="$PROJECT_DIR$/src/main/resources/rec_log_train.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/Executor/DataHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/Executor/TrainHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/Util/MatrixUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Executor/DataHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/Config/Const.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Executor/ValidateHandler.java" />
       </list>
     </option>
   </component>
@@ -383,32 +399,6 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../test" />
   </component>
   <component name="RunManager" selected="Application.Main">
-    <configuration default="false" name="Const.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="Config.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="RecommendSystem" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="Config" />
-      <option name="MAIN_CLASS_NAME" value="Config.Const" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -485,6 +475,32 @@
       <option name="MAIN_CLASS_NAME" value="Util.MatrixUtils" />
       <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="MatrixUtils" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="Util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="RecommendSystem" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="Util" />
+      <option name="MAIN_CLASS_NAME" value="Util.MatrixUtils" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -935,19 +951,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="JUnit.Recommend.test" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.Const.test" />
-      <item index="2" class="java.lang.String" itemvalue="Application.Main" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.CommonUtils.test" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.Main.test" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.MatrixUtils.test" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Main" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.CommonUtils.test" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.Main.test" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.MatrixUtils.test" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.MatrixUtils" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.Main" />
         <item index="1" class="java.lang.String" itemvalue="JUnit.MatrixUtils.test" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.Main.test" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.CommonUtils.test" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.Const.test" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.MatrixUtils" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.Main.test" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.CommonUtils.test" />
       </list>
     </recent_temporary>
   </component>
@@ -969,7 +985,7 @@
       <workItem from="1456846122073" duration="32000" />
       <workItem from="1456846340335" duration="531000" />
       <workItem from="1456846894715" duration="60000" />
-      <workItem from="1456895659771" duration="7712000" />
+      <workItem from="1456895659771" duration="16524000" />
     </task>
     <task id="LOCAL-00001" summary="第一次从ideaIU提交代码">
       <created>1451925424575</created>
@@ -993,39 +1009,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CommonUtils_test - 2016.03.02 at 13h 21m 54s.xml">
-      <configuration name="CommonUtils.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CommonUtils_test - 2016.03.02 at 13h 22m 20s.xml">
-      <configuration name="CommonUtils.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Main_test - 2016.03.02 at 14h 15m 41s.xml">
-      <configuration name="Main.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MatrixUtils_test - 2016.03.02 at 14h 43m 43s.xml">
+    <history-entry file="MatrixUtils_test - 2016.03.02 at 22h 56m 46s.xml">
       <configuration name="MatrixUtils.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Recommend_test - 2016.01.09 at 15h 07m 20s.xml">
-      <configuration name="Recommend.test" configurationId="JUnit" />
+    <history-entry file="MatrixUtils_test - 2016.03.02 at 23h 01m 49s.xml">
+      <configuration name="MatrixUtils.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Recommend_test - 2016.01.09 at 15h 10m 18s.xml">
-      <configuration name="Recommend.test" configurationId="JUnit" />
+    <history-entry file="MatrixUtils_test - 2016.03.02 at 23h 03m 39s.xml">
+      <configuration name="MatrixUtils.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Recommend_test - 2016.01.09 at 15h 11m 39s.xml">
-      <configuration name="Recommend.test" configurationId="JUnit" />
+    <history-entry file="MatrixUtils_test - 2016.03.02 at 23h 04m 30s.xml">
+      <configuration name="MatrixUtils.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Recommend_test - 2016.01.09 at 15h 12m 04s.xml">
-      <configuration name="Recommend.test" configurationId="JUnit" />
+    <history-entry file="MatrixUtils_test - 2016.03.02 at 23h 04m 56s.xml">
+      <configuration name="MatrixUtils.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Recommend_test - 2016.01.09 at 15h 12m 27s.xml">
-      <configuration name="Recommend.test" configurationId="JUnit" />
+    <history-entry file="MatrixUtils_test - 2016.03.02 at 23h 05m 36s.xml">
+      <configuration name="MatrixUtils.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Recommend_test - 2016.01.09 at 15h 19m 19s.xml">
-      <configuration name="Recommend.test" configurationId="JUnit" />
+    <history-entry file="MatrixUtils_test - 2016.03.02 at 23h 05m 49s.xml">
+      <configuration name="MatrixUtils.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MatrixUtils_test - 2016.03.02 at 23h 06m 01s.xml">
+      <configuration name="MatrixUtils.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MatrixUtils_test - 2016.03.02 at 23h 09m 23s.xml">
+      <configuration name="MatrixUtils.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MatrixUtils_test - 2016.03.02 at 23h 14m 24s.xml">
+      <configuration name="MatrixUtils.test" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36881000" />
+    <option name="totallyTimeSpent" value="45693000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1366" height="744" extended-state="6" />
@@ -1078,7 +1094,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Main.java</url>
-          <line>28</line>
+          <line>31</line>
           <properties />
           <option name="timeStamp" value="17" />
         </line-breakpoint>
@@ -1086,7 +1102,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="18" />
+      <option name="time" value="19" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1111,8 +1127,8 @@
           <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1924#1925#0" expanded="true" />
-            <element signature="e#1954#1955#0" expanded="true" />
+            <element signature="e#2455#2456#0" expanded="true" />
+            <element signature="e#2485#2486#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1141,8 +1157,8 @@
           <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1924#1925#0" expanded="true" />
-            <element signature="e#1954#1955#0" expanded="true" />
+            <element signature="e#2455#2456#0" expanded="true" />
+            <element signature="e#2485#2486#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1248,6 +1264,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Util/CommonUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Executor/DataHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="72" column="74" selection-start-line="72" selection-start-column="74" selection-end-line="72" selection-end-column="74" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#580#588#0" expanded="true" />
+            <element signature="e#885#893#0" expanded="true" />
+            <element signature="e#2139#2147#0" expanded="true" />
+            <element signature="e#2196#2204#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Util/MatrixUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="66" column="69" selection-start-line="66" selection-start-column="23" selection-end-line="66" selection-end-column="69" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1901#1909#0" expanded="true" />
+            <element signature="e#1952#1960#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Executor/TrainHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.5757575">
@@ -1259,23 +1311,11 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+          <caret line="44" column="89" selection-start-line="44" selection-start-column="89" selection-end-line="44" selection-end-column="89" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1924#1925#0" expanded="true" />
-            <element signature="e#1954#1955#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Executor/DataHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="54" column="83" selection-start-line="54" selection-start-column="83" selection-end-line="54" selection-end-column="83" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#559#567#0" expanded="true" />
-            <element signature="e#864#872#0" expanded="true" />
+            <element signature="e#2455#2456#0" expanded="true" />
+            <element signature="e#2485#2486#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1283,25 +1323,15 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/Config/Const.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+          <caret line="9" column="88" selection-start-line="9" selection-start-column="88" selection-end-line="9" selection-end-column="88" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Util/CommonUtils.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Executor/ValidateHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Util/MatrixUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5477387">
-          <caret line="36" column="56" selection-start-line="36" selection-start-column="56" selection-end-line="36" selection-end-column="56" />
+        <state vertical-scroll-proportion="0.50502515">
+          <caret line="44" column="35" selection-start-line="44" selection-start-column="35" selection-end-line="44" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -2,8 +2,9 @@ package Util;
 
 import Config.Const;
 
-import java.util.Date;
-import java.util.Random;
+import java.io.*;
+import java.nio.Buffer;
+import java.util.*;
 
 /**
  * Created by raymondwong on 16-3-2.
@@ -52,7 +53,7 @@ public class MatrixUtils {
         for (int r = 0; r < row; r++) {
             for (int c = 0; c < col; c++) {
                 Float cell = 0.0f;
-                for (int k = 0; k < Const.FEATURES_AMOUNT; k++) {
+                for (int k = 0; k < userMatrix[0].length; k++) {
                     cell += userMatrix[r][k] * itemMatrix[k][c];
                 }
                 ret[r][c] = cell;
@@ -62,13 +63,18 @@ public class MatrixUtils {
     }
 
     @org.junit.Test
-    public void test() {
-        Float[][] a = new Float[1][2];
-        Float[][] b = new Float[2][1];
-        a[0][0] = 1.0f;
-        a[0][1] = 2.0f;
-        b[0][0] = 3.0f;
-        b[1][0] = 4.0f;
-        print(dot(a, b));
+    public void test() throws IOException {
+        String path = "/home/raymondwong/code/recommendersystem/data/rec_log_train_100.txt";
+        BufferedReader reader = new BufferedReader(new FileReader(new File(path)));
+        Set<String> users = new HashSet<String>();
+        Set<String> items = new HashSet<String>();
+        String line = null;
+        while ((line = reader.readLine()) != null) {
+            String[] arr = line.split("\t");
+            users.add(arr[0]);
+            items.add(arr[1]);
+        }
+        System.out.println(users.size());
+        System.out.println(items.size());
     }
 }

@@ -5,9 +5,13 @@ package Config;
  */
 public class Const {
 
-    public static final String BASE_DATA_PATH = "/home/raymondwong/code/IdeaProjects/RecommendSystem/src/main/resources";
+    public static final String BASE_DATA_PATH = "/home/raymondwong/code/recommendersystem/data/";
 
-    public static final String RAW_TRAIN_DATA_PATH = BASE_DATA_PATH + "/rec_log_train.txt";
+    public static final String RAW_TRAIN_DATA_PATH = BASE_DATA_PATH + "rec_log_train_10000.txt";
+
+    public static final String TMP_TRAIN_DATA_PATH = BASE_DATA_PATH + "train_tmp.txt";
+
+    public static final String TMP_TEST_DATA_PATH = BASE_DATA_PATH + "test_tmp.txt";
 
     public static final int FEATURES_AMOUNT = 10;
 

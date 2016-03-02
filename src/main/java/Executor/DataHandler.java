@@ -1,5 +1,6 @@
 package Executor;
 
+import Config.Const;
 import Util.CommonUtils;
 import org.apache.commons.io.FileUtils;
 
@@ -54,5 +55,21 @@ public class DataHandler {
         }
         CommonUtils.logger(DataHandler.class, CommonUtils.LogType.INFO, "成功获取目标评分矩阵");
         return targetMatrix;
+    }
+
+    public static void splitDataSet(String rawPath) throws IOException {
+        List<String> testSet = new ArrayList<String>();
+        List<String> trainSet = new ArrayList<String>();
+        Random random = new Random((new Date()).getTime());
+        BufferedReader reader = new BufferedReader(new FileReader(new File(rawPath)));
+        String line = null;
+        while ((line = reader.readLine()) != null) {
+            if (random.nextInt(10) < 2)
+                testSet.add(line);
+            else
+                trainSet.add(line);
+        }
+        FileUtils.writeLines(new File(Const.TMP_TRAIN_DATA_PATH), trainSet);
+        FileUtils.writeLines(new File(Const.TMP_TEST_DATA_PATH), testSet);
     }
 }
